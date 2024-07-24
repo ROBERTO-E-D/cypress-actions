@@ -17,12 +17,12 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6.5.0
         with:
-          install-command: yarn install
-          browser: electron
+  	  install-command: yarn install
+     	  browser: electron
 	  record: true
           group: UI Electron
-	  spec: ${{ github.event.inputs.spec }}
-      env:
+       spec: ${{ github.event.inputs.spec }}
+       env:
            CYPRESS_RECORD_KEY: 65c962e7-badd-4c22-af9d-a707467855af
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
       
